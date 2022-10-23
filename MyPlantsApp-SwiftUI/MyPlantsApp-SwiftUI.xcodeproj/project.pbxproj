@@ -16,6 +16,9 @@
 		01F424AF2905AE65003311B9 /* MyPlantsApp_SwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F424AE2905AE65003311B9 /* MyPlantsApp_SwiftUITests.swift */; };
 		01F424B92905AE65003311B9 /* MyPlantsApp_SwiftUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F424B82905AE65003311B9 /* MyPlantsApp_SwiftUIUITests.swift */; };
 		01F424BB2905AE65003311B9 /* MyPlantsApp_SwiftUIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F424BA2905AE65003311B9 /* MyPlantsApp_SwiftUIUITestsLaunchTests.swift */; };
+		01F425082905AF92003311B9 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F425072905AF92003311B9 /* MainView.swift */; };
+		01F4250A2905B2D5003311B9 /* PlantToBeWateredView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F425092905B2D5003311B9 /* PlantToBeWateredView.swift */; };
+		01F4250C2905B2E8003311B9 /* PlantListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F4250B2905B2E8003311B9 /* PlantListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +51,9 @@
 		01F424B42905AE65003311B9 /* MyPlantsApp-SwiftUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MyPlantsApp-SwiftUIUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01F424B82905AE65003311B9 /* MyPlantsApp_SwiftUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlantsApp_SwiftUIUITests.swift; sourceTree = "<group>"; };
 		01F424BA2905AE65003311B9 /* MyPlantsApp_SwiftUIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlantsApp_SwiftUIUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		01F425072905AF92003311B9 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		01F425092905B2D5003311B9 /* PlantToBeWateredView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantToBeWateredView.swift; sourceTree = "<group>"; };
+		01F4250B2905B2E8003311B9 /* PlantListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +104,7 @@
 		01F424972905AE64003311B9 /* MyPlantsApp-SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				01F425062905AF72003311B9 /* MainView */,
 				01F424982905AE64003311B9 /* MyPlantsApp_SwiftUIApp.swift */,
 				01F4249A2905AE64003311B9 /* ContentView.swift */,
 				01F4249C2905AE65003311B9 /* Assets.xcassets */,
@@ -131,6 +138,16 @@
 				01F424BA2905AE65003311B9 /* MyPlantsApp_SwiftUIUITestsLaunchTests.swift */,
 			);
 			path = "MyPlantsApp-SwiftUIUITests";
+			sourceTree = "<group>";
+		};
+		01F425062905AF72003311B9 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				01F425072905AF92003311B9 /* MainView.swift */,
+				01F425092905B2D5003311B9 /* PlantToBeWateredView.swift */,
+				01F4250B2905B2E8003311B9 /* PlantListView.swift */,
+			);
+			path = MainView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,7 +283,10 @@
 				01F424A22905AE65003311B9 /* Persistence.swift in Sources */,
 				01F4249B2905AE64003311B9 /* ContentView.swift in Sources */,
 				01F424A52905AE65003311B9 /* MyPlantsApp_SwiftUI.xcdatamodeld in Sources */,
+				01F4250C2905B2E8003311B9 /* PlantListView.swift in Sources */,
+				01F425082905AF92003311B9 /* MainView.swift in Sources */,
 				01F424992905AE64003311B9 /* MyPlantsApp_SwiftUIApp.swift in Sources */,
+				01F4250A2905B2D5003311B9 /* PlantToBeWateredView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

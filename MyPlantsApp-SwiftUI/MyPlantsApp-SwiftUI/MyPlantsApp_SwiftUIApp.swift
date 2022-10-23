@@ -15,6 +15,7 @@ struct MyPlantsApp_SwiftUIApp: App {
         WindowGroup {
             //ContentView()
                 //.environment(\.managedObjectContext, persistenceController.container.viewContext)
+            MainView()
         }
     }
 }

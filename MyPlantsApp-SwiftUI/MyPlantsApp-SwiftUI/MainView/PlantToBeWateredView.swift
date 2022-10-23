@@ -1,0 +1,33 @@
+//
+//  PlantToBeWateredView.swift
+//  MyPlantsApp-SwiftUI
+//
+//  Created by Evan Webb on 10/23/22.
+//
+
+import SwiftUI
+
+struct PlantToBeWateredView: View {
+    var body: some View {
+        VStack {
+            Image(systemName: "trash")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 75, height: 75)
+                .clipShape(Circle())
+            HStack {
+                Text("Plant Name")
+                Text("00.00 mL")
+            }
+            Button("Water Me", action: {
+                print("pressed water me")
+            })
+        }
+    }
+}
+
+struct PlantToBeWateredView_Previews: PreviewProvider {
+    static var previews: some View {
+        PlantToBeWateredView()
+    }
+}
