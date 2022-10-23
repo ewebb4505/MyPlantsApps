@@ -15,7 +15,7 @@ struct PlantToBeWateredView: View {
                 .scaledToFit()
                 .frame(width: 75, height: 75)
                 .clipShape(Circle())
-            HStack {
+            VStack {
                 Text("Plant Name")
                 Text("00.00 mL")
             }

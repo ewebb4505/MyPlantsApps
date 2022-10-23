@@ -8,41 +8,45 @@
 import SwiftUI
 
 struct MainView: View {
-    var plants = ["Plant1",
+    var plants = [  "Plant1",
                     "Plant2",
                     "Plant3",
                     "Plant4",
                     "Plant5",
-                    "Plant6"]
+                    "Plant6",
+                    "Plant7",
+                    "Plant8",
+                    "Plant9"]
     
     var body: some View {
         NavigationView{
-            GeometryReader { g in
+            VStack {
+                Divider()
+                Spacer()
+                    .frame(height: 16)
                 ScrollView {
                     VStack(spacing: 32.0) {
-                        ScrollView(.horizontal, showsIndicators: false){
-                            HStack {
-                                ForEach(self.plants, id: \.self) { _ in
-                                            PlantToBeWateredView()
-                                }
-                            }
-                        }
-                        List {
-                            ForEach(self.plants, id: \.self) { _ in
-                                NavigationLink(destination: {
-                                    Text("Hello")
-                                }, label: {
-                                    PlantListView()
-                                })
-                                            
-                            }
-                        }
-                        .listStyle(.plain)
-                        .frame(width: g.size.width - 5, height: g.size.height - 50, alignment: .center)
+                        PlantsToBeWatered(plants: plants)
+                        MyPlantsList(plants: plants)
                     }
                 }
             }
+            .navigationTitle("My Plants")
+            .toolbar{
+                Button(action: {}, label: {
+                    HStack {
+                        Image(systemName: "plus")
+                            .imageScale(.medium)
+                        Text("Plant")
+                    }
+                })
+                .tint(.green)
+                .buttonStyle(.borderedProminent)
+                .clipShape(Capsule())
+            }
         }
+        //this fixes the constraints problem I've been having
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 

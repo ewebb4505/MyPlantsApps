@@ -19,6 +19,8 @@
 		01F425082905AF92003311B9 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F425072905AF92003311B9 /* MainView.swift */; };
 		01F4250A2905B2D5003311B9 /* PlantToBeWateredView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F425092905B2D5003311B9 /* PlantToBeWateredView.swift */; };
 		01F4250C2905B2E8003311B9 /* PlantListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F4250B2905B2E8003311B9 /* PlantListView.swift */; };
+		01F4250E2905B7C5003311B9 /* PlantsToBeWatered.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F4250D2905B7C5003311B9 /* PlantsToBeWatered.swift */; };
+		01F425102906035E003311B9 /* MyPlantsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F4250F2906035E003311B9 /* MyPlantsList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,8 @@
 		01F425072905AF92003311B9 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		01F425092905B2D5003311B9 /* PlantToBeWateredView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantToBeWateredView.swift; sourceTree = "<group>"; };
 		01F4250B2905B2E8003311B9 /* PlantListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantListView.swift; sourceTree = "<group>"; };
+		01F4250D2905B7C5003311B9 /* PlantsToBeWatered.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantsToBeWatered.swift; sourceTree = "<group>"; };
+		01F4250F2906035E003311B9 /* MyPlantsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlantsList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +150,8 @@
 				01F425072905AF92003311B9 /* MainView.swift */,
 				01F425092905B2D5003311B9 /* PlantToBeWateredView.swift */,
 				01F4250B2905B2E8003311B9 /* PlantListView.swift */,
+				01F4250D2905B7C5003311B9 /* PlantsToBeWatered.swift */,
+				01F4250F2906035E003311B9 /* MyPlantsList.swift */,
 			);
 			path = MainView;
 			sourceTree = "<group>";
@@ -282,9 +288,11 @@
 			files = (
 				01F424A22905AE65003311B9 /* Persistence.swift in Sources */,
 				01F4249B2905AE64003311B9 /* ContentView.swift in Sources */,
+				01F4250E2905B7C5003311B9 /* PlantsToBeWatered.swift in Sources */,
 				01F424A52905AE65003311B9 /* MyPlantsApp_SwiftUI.xcdatamodeld in Sources */,
 				01F4250C2905B2E8003311B9 /* PlantListView.swift in Sources */,
 				01F425082905AF92003311B9 /* MainView.swift in Sources */,
+				01F425102906035E003311B9 /* MyPlantsList.swift in Sources */,
 				01F424992905AE64003311B9 /* MyPlantsApp_SwiftUIApp.swift in Sources */,
 				01F4250A2905B2D5003311B9 /* PlantToBeWateredView.swift in Sources */,
 			);

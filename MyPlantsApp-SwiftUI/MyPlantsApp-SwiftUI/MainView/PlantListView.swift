@@ -9,18 +9,30 @@ import SwiftUI
 
 struct PlantListView: View {
     var body: some View {
-        HStack {
-            Image(systemName: "trash")
-                .resizable()
-                .scaledToFit()
-                .frame(width: 50, height: 50)
-            VStack {
-                Text("Name of Plant")
-                Text("Species")
+        VStack {
+            HStack(spacing: 14.0) {
+                Image(systemName: "trash")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 50, height: 50)
+                    .clipShape(Circle())
+                VStack(alignment: .leading) {
+                    Text("Name of Plant")
+                    Text("Species")
+                        .font(Font.caption)
+                        .fontWeight(.light)
+                }
+                Spacer()
+                Image(systemName: "chevron.right")
             }
-            Spacer()
-            //Image(systemName: "chevron.right")
+            .padding(.vertical, 6.0)
+            .padding(.leading, 16.0)
+            .padding(.trailing, 16.0)
+            Divider()
+                .frame(height: 1)
+                .offset(x: 16, y: 0)
         }
+        
     }
 }
 
