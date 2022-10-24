@@ -25,8 +25,10 @@ class SimpleCollCell: UICollectionViewCell {
 }
 
 class SimpleTableCell: UITableViewCell {
+    @IBOutlet weak var plantImageView: UIImageView!
+    @IBOutlet weak var plantNameLabel: UILabel!
+    @IBOutlet weak var plantSpeciesLabel: UILabel!
     
-    @IBOutlet weak var theLabel: UILabel!
 }
 
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UITableViewDataSource, UITableViewDelegate {
@@ -53,7 +55,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
    }
    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
        let c = tableView.dequeueReusableCell(withIdentifier: "SimpleTableCell", for: indexPath) as! SimpleTableCell
-       c.theLabel.text = "Row \(indexPath.row)"
+       c.plantNameLabel.text = "Plant Name Here"
+       c.plantSpeciesLabel.text = "Plant Species Here"
+       c.plantImageView.layer.cornerRadius = 50/2
        return c
    }
    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
