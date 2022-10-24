@@ -18,10 +18,14 @@ struct PlantToBeWateredView: View {
             VStack {
                 Text("Plant Name")
                 Text("00.00 mL")
+                    .font(Font.caption)
+                    .fontWeight(.light)
             }
             Button("Water Me", action: {
                 print("pressed water me")
             })
+            .buttonStyle(.bordered)
+            .controlSize(.mini)
         }
     }
 }
