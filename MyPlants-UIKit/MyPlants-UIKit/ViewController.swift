@@ -20,31 +20,64 @@ final class ContentSizedTableView: UITableView {
 }
 
 class SimpleCollCell: UICollectionViewCell {
-    
-    @IBOutlet weak var theLabel: UILabel!
+    @IBOutlet weak var plantImage: UIImageView!
+    @IBOutlet weak var plantName: UILabel!
+    @IBOutlet weak var plantWaterAmount: UILabel!
+    @IBOutlet weak var plantWaterButton: UIButton!
 }
 
 class SimpleTableCell: UITableViewCell {
     @IBOutlet weak var plantImageView: UIImageView!
     @IBOutlet weak var plantNameLabel: UILabel!
     @IBOutlet weak var plantSpeciesLabel: UILabel!
-    
 }
 
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UITableViewDataSource, UITableViewDelegate {
 
-    @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var tableView: ContentSizedTableView!
+    @IBOutlet weak var plantsToBeWateredCollectionView: UICollectionView!
+    @IBOutlet weak var myPlantsTableView: ContentSizedTableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        tableView.dataSource = self
-        tableView.delegate = self
-        collectionView.dataSource = self
-        collectionView.delegate = self
+        myPlantsTableView.dataSource = self
+        myPlantsTableView.delegate = self
+        plantsToBeWateredCollectionView.dataSource = self
+        plantsToBeWateredCollectionView.delegate = self
+    
+        setup()
         
-        print(tableView.frame.size)
+        
+    }
+    
+    private func setup() {
+        setupNavBarButton()
+    }
+    
+    private func setupNavBarButton() {
+        let addPlantBarButtonView = UIView(frame: CGRect(x: 0, y: 0, width: 90, height: 38))
+
+        let addPlantButton = UIButton()
+        addPlantButton.tintColor = UIColor.systemGreen
+        addPlantButton.configuration = UIButton.Configuration.borderedProminent()
+        addPlantButton.configuration?.cornerStyle = .capsule
+        addPlantButton.configuration?.imagePadding = 4
+        addPlantButton.configuration?.preferredSymbolConfigurationForImage = .init(scale: .small)
+        addPlantButton.setTitle("Plant", for: .normal)
+        addPlantButton.setImage(UIImage(systemName: "plus"), for: .normal)
+        
+        addPlantButton.autoresizesSubviews = true
+        addPlantButton.autoresizingMask = [.flexibleWidth , .flexibleHeight]
+        addPlantButton.addTarget(self, action: #selector(addPlantButtonTarget), for: .touchUpInside)
+        addPlantBarButtonView.addSubview(addPlantButton)
+        
+        
+        let leftBarButton = UIBarButtonItem.init(customView: addPlantBarButtonView)
+        self.navigationItem.rightBarButtonItem = leftBarButton
+    }
+    
+    @objc func addPlantButtonTarget() {
+        print("You pressed add plant button")
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -65,7 +98,11 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
    }
    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
        let c = collectionView.dequeueReusableCell(withReuseIdentifier: "SimpleCollCell", for: indexPath) as! SimpleCollCell
-       c.theLabel.text = "\(indexPath.item)"
+       c.plantName.text = "Plant Name"
+       c.plantWaterAmount.text = "70 mL"
+       c.plantImage.layer.cornerRadius = 75/2
+       
+       print(c.frame.size)
        return c
    }
 }

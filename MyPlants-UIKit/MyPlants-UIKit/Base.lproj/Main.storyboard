@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fVN-B2-q70">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -9,25 +9,25 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--My Plants-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyPlants_UIKit" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="MyPlants_UIKit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C4u-iH-9KO">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="140" width="414" height="722"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="9VQ-41-Jh6">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="270"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="350"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b8f-i9-qDA">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
                                                 <subviews>
                                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Djo-AG-w2t">
-                                                        <rect key="frame" x="0.0" y="10" width="414" height="100"/>
+                                                        <rect key="frame" x="0.0" y="10" width="414" height="180"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="v5g-Yr-WbU">
                                                             <size key="itemSize" width="80" height="80"/>
@@ -36,27 +36,60 @@
                                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                         </collectionViewFlowLayout>
                                                         <cells>
-                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SimpleCollCell" id="NFw-pq-rXl" customClass="SimpleCollCell" customModule="MyPlants_UIKit" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="10" width="80" height="80"/>
+                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" reuseIdentifier="SimpleCollCell" translatesAutoresizingMaskIntoConstraints="NO" id="NFw-pq-rXl" customClass="SimpleCollCell" customModule="MyPlants_UIKit" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="15" width="100" height="150"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="4WI-V3-jYO">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                     <subviews>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9P1-JM-NRO">
-                                                                            <rect key="frame" x="19.5" y="30" width="41.5" height="20.5"/>
-                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                            <nil key="textColor"/>
-                                                                            <nil key="highlightedColor"/>
-                                                                        </label>
+                                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Law-gC-wj3">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="100" height="162.5"/>
+                                                                            <subviews>
+                                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test_plant_img" translatesAutoresizingMaskIntoConstraints="NO" id="nIc-Y2-crJ">
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="75"/>
+                                                                                    <constraints>
+                                                                                        <constraint firstAttribute="height" constant="75" id="9Cd-aX-AM4"/>
+                                                                                    </constraints>
+                                                                                </imageView>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9P1-JM-NRO">
+                                                                                    <rect key="frame" x="0.0" y="79" width="100" height="22"/>
+                                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                    <nil key="textColor"/>
+                                                                                    <nil key="highlightedColor"/>
+                                                                                </label>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dti-EI-kRT">
+                                                                                    <rect key="frame" x="0.0" y="105" width="100" height="22.5"/>
+                                                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                                                                    <nil key="textColor"/>
+                                                                                    <nil key="highlightedColor"/>
+                                                                                </label>
+                                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="we7-NG-ltW">
+                                                                                    <rect key="frame" x="0.0" y="131.5" width="100" height="31"/>
+                                                                                    <state key="normal" title="Button"/>
+                                                                                    <buttonConfiguration key="configuration" style="gray" title="Water" cornerStyle="capsule"/>
+                                                                                </button>
+                                                                            </subviews>
+                                                                            <constraints>
+                                                                                <constraint firstItem="9P1-JM-NRO" firstAttribute="height" secondItem="Law-gC-wj3" secondAttribute="height" multiplier="0.136667" id="4ys-Tp-Kgy"/>
+                                                                                <constraint firstItem="nIc-Y2-crJ" firstAttribute="centerX" secondItem="Law-gC-wj3" secondAttribute="centerX" id="p84-mn-4fd"/>
+                                                                                <constraint firstAttribute="width" constant="100" id="rqb-hb-3Y6"/>
+                                                                                <constraint firstItem="dti-EI-kRT" firstAttribute="height" secondItem="Law-gC-wj3" secondAttribute="height" multiplier="0.136667" id="suJ-DA-wVH"/>
+                                                                            </constraints>
+                                                                        </stackView>
                                                                     </subviews>
                                                                     <constraints>
-                                                                        <constraint firstItem="9P1-JM-NRO" firstAttribute="centerY" secondItem="4WI-V3-jYO" secondAttribute="centerY" id="pKb-8F-tsk"/>
-                                                                        <constraint firstItem="9P1-JM-NRO" firstAttribute="centerX" secondItem="4WI-V3-jYO" secondAttribute="centerX" id="vad-Rt-EVd"/>
+                                                                        <constraint firstItem="Law-gC-wj3" firstAttribute="leading" secondItem="4WI-V3-jYO" secondAttribute="leading" id="Ax3-ux-sgn"/>
+                                                                        <constraint firstItem="Law-gC-wj3" firstAttribute="top" secondItem="4WI-V3-jYO" secondAttribute="top" id="HVy-s3-ULN"/>
+                                                                        <constraint firstItem="Law-gC-wj3" firstAttribute="trailing" secondItem="4WI-V3-jYO" secondAttribute="trailing" id="Npd-1h-2yX"/>
+                                                                        <constraint firstItem="Law-gC-wj3" firstAttribute="bottom" secondItem="4WI-V3-jYO" secondAttribute="bottom" id="xi7-Rh-IcN"/>
                                                                     </constraints>
                                                                 </collectionViewCellContentView>
                                                                 <connections>
-                                                                    <outlet property="theLabel" destination="9P1-JM-NRO" id="6gl-kN-AKe"/>
+                                                                    <outlet property="plantImage" destination="nIc-Y2-crJ" id="wNr-PL-vFN"/>
+                                                                    <outlet property="plantName" destination="9P1-JM-NRO" id="in5-fw-6Ne"/>
+                                                                    <outlet property="plantWaterAmount" destination="dti-EI-kRT" id="sUG-mh-RkC"/>
+                                                                    <outlet property="plantWaterButton" destination="we7-NG-ltW" id="Eqb-Wh-ZCT"/>
                                                                 </connections>
                                                             </collectionViewCell>
                                                         </cells>
@@ -68,11 +101,11 @@
                                                     <constraint firstAttribute="trailing" secondItem="Djo-AG-w2t" secondAttribute="trailing" id="SyF-n7-7oi"/>
                                                     <constraint firstItem="Djo-AG-w2t" firstAttribute="leading" secondItem="b8f-i9-qDA" secondAttribute="leading" id="b2r-B5-TKL"/>
                                                     <constraint firstItem="Djo-AG-w2t" firstAttribute="top" secondItem="b8f-i9-qDA" secondAttribute="top" constant="10" id="hhz-y6-ueM"/>
-                                                    <constraint firstAttribute="height" constant="120" id="oab-M2-C0d"/>
+                                                    <constraint firstAttribute="height" constant="200" id="oab-M2-C0d"/>
                                                 </constraints>
                                             </view>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="JqA-ZA-SHI" customClass="ContentSizedTableView" customModule="MyPlants_UIKit" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="120" width="414" height="150"/>
+                                                <rect key="frame" x="0.0" y="200" width="414" height="150"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" priority="250" constant="150" id="Fdd-5o-WzI"/>
@@ -165,12 +198,32 @@
                             <constraint firstItem="C4u-iH-9KO" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="raM-6J-cm6"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="My Plants" largeTitleDisplayMode="always" id="Pao-fB-nQ4"/>
                     <connections>
-                        <outlet property="collectionView" destination="Djo-AG-w2t" id="BXM-7S-Ggu"/>
-                        <outlet property="tableView" destination="JqA-ZA-SHI" id="Wa5-6G-UGu"/>
+                        <outlet property="myPlantsTableView" destination="JqA-ZA-SHI" id="Wa5-6G-UGu"/>
+                        <outlet property="plantsToBeWateredCollectionView" destination="Djo-AG-w2t" id="BXM-7S-Ggu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="928.98550724637687" y="77.678571428571431"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="46K-5Z-GNT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fVN-B2-q70" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="jNg-GV-cWb">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <navigationBarAppearance key="scrollEdgeAppearance"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="MrK-4h-wRD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x9M-xF-IL7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="77.678571428571431"/>
         </scene>
