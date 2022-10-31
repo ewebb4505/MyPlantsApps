@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		016E145C290EFEB9002AEDD0 /* Plant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016E145B290EFEB9002AEDD0 /* Plant.swift */; };
+		016E145E290F0175002AEDD0 /* WaterSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016E145D290F0175002AEDD0 /* WaterSchedule.swift */; };
+		016E1460290F02A9002AEDD0 /* PlantNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016E145F290F02A9002AEDD0 /* PlantNote.swift */; };
+		016E1463290F0926002AEDD0 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016E1462290F0926002AEDD0 /* MainViewModel.swift */; };
+		016E1465290F0A48002AEDD0 /* Plants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016E1464290F0A48002AEDD0 /* Plants.swift */; };
+		016E1468290F21BE002AEDD0 /* AddPlant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016E1467290F21BE002AEDD0 /* AddPlant.swift */; };
+		016E146B290FF27E002AEDD0 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016E146A290FF27E002AEDD0 /* ImagePicker.swift */; };
 		01F424992905AE64003311B9 /* MyPlantsApp_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F424982905AE64003311B9 /* MyPlantsApp_SwiftUIApp.swift */; };
 		01F4249B2905AE64003311B9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F4249A2905AE64003311B9 /* ContentView.swift */; };
 		01F4249D2905AE65003311B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01F4249C2905AE65003311B9 /* Assets.xcassets */; };
@@ -41,6 +48,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		016E145B290EFEB9002AEDD0 /* Plant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plant.swift; sourceTree = "<group>"; };
+		016E145D290F0175002AEDD0 /* WaterSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterSchedule.swift; sourceTree = "<group>"; };
+		016E145F290F02A9002AEDD0 /* PlantNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantNote.swift; sourceTree = "<group>"; };
+		016E1462290F0926002AEDD0 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		016E1464290F0A48002AEDD0 /* Plants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plants.swift; sourceTree = "<group>"; };
+		016E1467290F21BE002AEDD0 /* AddPlant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlant.swift; sourceTree = "<group>"; };
+		016E146A290FF27E002AEDD0 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		01F424952905AE64003311B9 /* MyPlantsApp-SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MyPlantsApp-SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01F424982905AE64003311B9 /* MyPlantsApp_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlantsApp_SwiftUIApp.swift; sourceTree = "<group>"; };
 		01F4249A2905AE64003311B9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -85,6 +99,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		016E145A290EFE9F002AEDD0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				016E145B290EFEB9002AEDD0 /* Plant.swift */,
+				016E145D290F0175002AEDD0 /* WaterSchedule.swift */,
+				016E145F290F02A9002AEDD0 /* PlantNote.swift */,
+				016E1464290F0A48002AEDD0 /* Plants.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		016E1461290F0901002AEDD0 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				016E1462290F0926002AEDD0 /* MainViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		016E1466290F21AC002AEDD0 /* AddPlantViews */ = {
+			isa = PBXGroup;
+			children = (
+				016E1467290F21BE002AEDD0 /* AddPlant.swift */,
+			);
+			path = AddPlantViews;
+			sourceTree = "<group>";
+		};
+		016E1469290FF270002AEDD0 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				016E146A290FF27E002AEDD0 /* ImagePicker.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		01F4248C2905AE64003311B9 = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +157,9 @@
 		01F424972905AE64003311B9 /* MyPlantsApp-SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				016E1469290FF270002AEDD0 /* Utils */,
+				016E1461290F0901002AEDD0 /* ViewModels */,
+				016E145A290EFE9F002AEDD0 /* Models */,
 				01F425062905AF72003311B9 /* MainView */,
 				01F424982905AE64003311B9 /* MyPlantsApp_SwiftUIApp.swift */,
 				01F4249A2905AE64003311B9 /* ContentView.swift */,
@@ -147,6 +199,7 @@
 		01F425062905AF72003311B9 /* MainView */ = {
 			isa = PBXGroup;
 			children = (
+				016E1466290F21AC002AEDD0 /* AddPlantViews */,
 				01F425072905AF92003311B9 /* MainView.swift */,
 				01F425092905B2D5003311B9 /* PlantToBeWateredView.swift */,
 				01F4250B2905B2E8003311B9 /* PlantListView.swift */,
@@ -291,8 +344,15 @@
 				01F4250E2905B7C5003311B9 /* PlantsToBeWatered.swift in Sources */,
 				01F424A52905AE65003311B9 /* MyPlantsApp_SwiftUI.xcdatamodeld in Sources */,
 				01F4250C2905B2E8003311B9 /* PlantListView.swift in Sources */,
+				016E1463290F0926002AEDD0 /* MainViewModel.swift in Sources */,
 				01F425082905AF92003311B9 /* MainView.swift in Sources */,
 				01F425102906035E003311B9 /* MyPlantsList.swift in Sources */,
+				016E1468290F21BE002AEDD0 /* AddPlant.swift in Sources */,
+				016E1460290F02A9002AEDD0 /* PlantNote.swift in Sources */,
+				016E1465290F0A48002AEDD0 /* Plants.swift in Sources */,
+				016E145E290F0175002AEDD0 /* WaterSchedule.swift in Sources */,
+				016E145C290EFEB9002AEDD0 /* Plant.swift in Sources */,
+				016E146B290FF27E002AEDD0 /* ImagePicker.swift in Sources */,
 				01F424992905AE64003311B9 /* MyPlantsApp_SwiftUIApp.swift in Sources */,
 				01F4250A2905B2D5003311B9 /* PlantToBeWateredView.swift in Sources */,
 			);

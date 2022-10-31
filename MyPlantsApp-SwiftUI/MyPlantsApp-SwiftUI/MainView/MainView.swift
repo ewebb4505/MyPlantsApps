@@ -8,32 +8,32 @@
 import SwiftUI
 
 struct MainView: View {
-    var plants = [  "Plant1",
-                    "Plant2",
-                    "Plant3",
-                    "Plant4",
-                    "Plant5",
-                    "Plant6",
-                    "Plant7",
-                    "Plant8",
-                    "Plant9"]
+    @StateObject var viewModel = MainViewModel()
+    @State private var showingAddPlantSheet = false
     
     var body: some View {
         NavigationView{
             VStack {
-                Divider()
-                Spacer()
-                    .frame(height: 16)
-                ScrollView {
-                    VStack(spacing: 32.0) {
-                        PlantsToBeWatered(plants: plants)
-                        MyPlantsList(plants: plants)
+                if !viewModel.plants.isEmpty {
+                    Divider()
+                    Spacer()
+                        .frame(height: 16)
+                    ScrollView {
+                        VStack(spacing: 32.0) {
+                            PlantsToBeWatered(myPlants: $viewModel.plants)
+                            MyPlantsList(myPlants: $viewModel.plants)
+                        }
                     }
+                } else {
+                    
                 }
             }
             .navigationTitle("My Plants")
             .toolbar{
-                Button(action: {}, label: {
+                Button(action: {
+                    //here I need to load the addPlant view with a modal.
+                    self.showingAddPlantSheet.toggle()
+                }, label: {
                     HStack {
                         Image(systemName: "plus")
                             .imageScale(.medium)
@@ -43,6 +43,10 @@ struct MainView: View {
                 .tint(.green)
                 .buttonStyle(.borderedProminent)
                 .clipShape(Capsule())
+            }
+            .sheet(isPresented: $showingAddPlantSheet) {
+                AddPlant()
+                    .environmentObject(viewModel)
             }
         }
         //this fixes the constraints problem I've been having

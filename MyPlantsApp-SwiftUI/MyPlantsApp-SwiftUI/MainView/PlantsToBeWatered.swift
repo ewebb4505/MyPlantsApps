@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PlantsToBeWatered: View {
-    var plants: [String]
+    @Binding var myPlants: [Plant]
     
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
@@ -17,7 +17,7 @@ struct PlantsToBeWatered: View {
                 .fontWeight(.semibold)
             ScrollView(.horizontal, showsIndicators: false){
                 HStack(spacing: 16.0) {
-                    ForEach(self.plants, id: \.self) { _ in
+                    ForEach(self.myPlants) { _ in
                                 PlantToBeWateredView()
                     }
                 }
@@ -29,15 +29,15 @@ struct PlantsToBeWatered: View {
 
 struct PlantsToBeWatered_Previews: PreviewProvider {
     static var previews: some View {
-        PlantsToBeWatered(plants: [
-            "Plant1",
-            "Plant2",
-            "Plant3",
-            "Plant4",
-            "Plant5",
-            "Plant6",
-            "Plant7",
-            "Plant8"
-        ])
+        PlantsToBeWatered(myPlants: .constant([
+            Plant(name: "testing1", species: "testing1 species", waterSchedule: .init()),
+            Plant(name: "testing2", species: "testing2 species", waterSchedule: .init()),
+            Plant(name: "testing3", species: "testing3 species", waterSchedule: .init()),
+            Plant(name: "testing4", species: "testing4 species", waterSchedule: .init()),
+            Plant(name: "testing5", species: "testing5 species", waterSchedule: .init()),
+            Plant(name: "testing6", species: "testing6 species", waterSchedule: .init()),
+            Plant(name: "testing7", species: "testing7 species", waterSchedule: .init()),
+            Plant(name: "testing8", species: "testing8 species", waterSchedule: .init())
+        ]))
     }
 }
